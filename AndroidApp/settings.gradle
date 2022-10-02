@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "My Application"
+include ':app'
+include ':unityLibrary'
+project(':unityLibrary').projectDir=new File('..\\UnityProject\\androidBuild\\unityLibrary')
