@@ -1,9 +1,8 @@
-package com.example.myapplication
+package com.example.myapplication.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -14,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.myapplication.R
 import com.example.myapplication.ui.AppTextField
 import com.example.myapplication.ui.AppTitle
 import com.example.myapplication.ui.LinkButton
@@ -89,7 +89,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun nextActivity() {
-        val intend = Intent(this, UnityPlayerActivity::class.java)
+        val intend = Intent(this, MainActivity2::class.java)
         startActivity(intend)
     }
+
 }
