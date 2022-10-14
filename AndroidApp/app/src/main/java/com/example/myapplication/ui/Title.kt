@@ -9,6 +9,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -22,7 +23,7 @@ fun AppTitle() {
         Text(
             text = stringResource(id = R.string.app_name),
             fontSize = 36.sp,
-            color = Color.Cyan
+            color = colorResource(id = R.color.lightBlue)
         )
         Spacer(modifier = Modifier.size(4.dp))
         Text(
