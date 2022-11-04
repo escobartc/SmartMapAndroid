@@ -2,13 +2,14 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.myapplication"
+        applicationId "com.example.smartmap"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -65,4 +66,9 @@ dependencies {
     implementation "androidx.room:room-ktx:2.4.3"
     kapt "androidx.room:room-compiler:2.4.3"
     implementation 'androidx.lifecycle:lifecycle-runtime:2.5.1'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation platform('com.google.firebase:firebase-bom:31.0.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+
 }

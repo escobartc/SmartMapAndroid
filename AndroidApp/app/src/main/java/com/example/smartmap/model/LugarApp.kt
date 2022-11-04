@@ -1,4 +1,4 @@
-package com.example.myapplication.model
+package com.example.smartmap.model
 
 import android.content.Context
 import androidx.room.Room

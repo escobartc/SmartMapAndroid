@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.smartmap
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

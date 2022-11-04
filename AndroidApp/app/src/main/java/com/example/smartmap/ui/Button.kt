@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.smartmap.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Indication

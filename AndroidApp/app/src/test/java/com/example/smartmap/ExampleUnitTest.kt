@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.smartmap
 
 import org.junit.Test
 

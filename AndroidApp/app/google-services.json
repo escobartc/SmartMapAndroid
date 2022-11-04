@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124744295602",
+    "project_id": "smartmap-6ee39",
+    "storage_bucket": "smartmap-6ee39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124744295602:android:d4a4a3075eebe97af595ab",
+        "android_client_info": {
+          "package_name": "com.example.smartmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124744295602-7bbfevn0jf8f4fb3gdb8qh2lh36id653.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA7XJi64BV22MjkXZCLM0TnlN0vTEbWCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124744295602-7bbfevn0jf8f4fb3gdb8qh2lh36id653.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

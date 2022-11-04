@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.smartmap.ui
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState

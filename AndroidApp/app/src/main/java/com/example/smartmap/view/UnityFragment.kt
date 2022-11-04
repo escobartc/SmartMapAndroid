@@ -1,4 +1,4 @@
-package com.example.myapplication.view
+package com.example.smartmap.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import com.example.myapplication.R
+import com.example.smartmap.R
 import com.unity3d.player.UnityPlayer
 
 

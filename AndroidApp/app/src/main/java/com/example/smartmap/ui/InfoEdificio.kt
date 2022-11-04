@@ -1,21 +1,17 @@
-package com.example.myapplication.ui
+package com.example.smartmap.ui
 
-import android.graphics.drawable.shapes.Shape
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily.Companion.SansSerif
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -23,7 +19,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.myapplication.R
+import coil.compose.SubcomposeAsyncImage
+import coil.compose.rememberAsyncImagePainter
+import com.example.smartmap.R
 
 @Preview
 @Composable
@@ -37,22 +35,33 @@ private fun Preview() {
                 "\n" +
                 "Cada uno de los espacios del edificio fue diseñado para ser un espacio vivo de aprendizaje bajo la premisa de compartir el conocimiento, respondiendo a líneas de investigación como big data y analytics, inteligencia artificial, internet de las cosas, energía y biorecursos, salud, infraestructura sostenible y transporte, ambiente y cambio climático, TIC y sociedad, organización y productividad corporativa, materiales de construcción entre otras.\n" +
                 "\n" +
-                "Como una muestra más del compromiso de la Pontificia Universidad Javeriana con el cuidado de nuestra casa común, el edificio fue reconocido con la Certificación Edge del Banco Mundial, donde se resaltan sus características de uso eficiente de agua y energía, uso de materiales amigables con el medio ambiente y su diseño bioclimático."
-    , onClick = {})
+                "Como una muestra más del compromiso de la Pontificia Universidad Javeriana con el cuidado de nuestra casa común, el edificio fue reconocido con la Certificación Edge del Banco Mundial, donde se resaltan sus características de uso eficiente de agua y energía, uso de materiales amigables con el medio ambiente y su diseño bioclimático.",
+        onClick = {},
+        imagen = "https://www.example.com/image.jpg"
+    )
 
 }
 
 @Composable
-fun InfoEdificio(numero: String, nombre: String, descripcion: String, onClick: () -> Unit) {
+fun InfoEdificio(
+    numero: String,
+    nombre: String,
+    descripcion: String,
+    onClick: () -> Unit,
+    imagen: String
+) {
     Surface(modifier = Modifier.fillMaxSize(), color = colorResource(id = R.color.blue)) {
         Surface(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 32.dp, vertical = 20.dp),
-            shape = RoundedCornerShape(12.dp),
+                .padding(horizontal = 16.dp, vertical = 16.dp),
+            shape = RoundedCornerShape(16.dp),
             color = Color.White
         ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Row {
                     Text(
                         text = "$numero $nombre",
@@ -64,31 +73,25 @@ fun InfoEdificio(numero: String, nombre: String, descripcion: String, onClick: (
                         fontFamily = SansSerif
                     )
                 }
-                Row {
-                    Image(
-                        modifier = Modifier.size(120.dp),
-                        painter = painterResource(id = R.drawable.ic_ed12),
+                Row(modifier = Modifier.size(220.dp)) {
+                    SubcomposeAsyncImage(
+                        modifier = Modifier.fillMaxSize(),
+                        model = imagen.ifEmpty {
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Javeriana.svg/1200px-Javeriana.svg.png"
+                        },
+                        loading = {
+                            CircularProgressIndicator()
+                        },
                         contentDescription = null
                     )
                 }
-                Row {
+                Row(modifier = Modifier.wrapContentSize()) {
                     Text(
-                        text = "Información: ",
-                        fontSize = 20.sp,
-                        overflow = TextOverflow.Visible,
-                        maxLines = 10,
-                        textAlign = TextAlign.Center,
-                        fontWeight = FontWeight.Bold,
-                        fontFamily = SansSerif
-                    )
-                }
-                Row {
-                    Text(
-                        modifier = Modifier.padding(12.dp),
+                        modifier = Modifier.padding(10.dp),
                         text = descripcion,
                         fontSize = 18.sp,
                         overflow = TextOverflow.Visible,
-                        maxLines = 10,
+                        maxLines = 25,
                         textAlign = TextAlign.Justify,
                         fontWeight = FontWeight.Bold,
                         fontFamily = SansSerif
@@ -96,7 +99,7 @@ fun InfoEdificio(numero: String, nombre: String, descripcion: String, onClick: (
                 }
                 Button(
                     modifier = Modifier
-                        .size(width = 139.dp, height = 80.dp)
+                        .size(width = 139.dp, height = 60.dp)
                         .border(
                             width = 1.dp,
                             shape = RoundedCornerShape(12.dp),

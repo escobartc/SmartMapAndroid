@@ -1,4 +1,4 @@
-package com.example.myapplication.model
+package com.example.smartmap.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -9,5 +9,6 @@ data class Lugar(
     val id: Int,
     val numero: String,
     val nombre: String,
-    val descripcion: String
+    val descripcion: String,
+    val imagen: String
 )
