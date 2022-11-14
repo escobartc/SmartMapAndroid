@@ -266,7 +266,7 @@ class RegisterActivity : AppCompatActivity() {
         firebaseUser!!.sendEmailVerification()
             .addOnSuccessListener {
                 viewModel.enviarUsuario()
-                showAlert("Se envió un correo de verificación a ${viewModel.usuario.value}")
+                showAlert("Se envió un correo de verificación a ${viewModel.usuario.value}, por favor revisar en spam.")
                 firebaseAuth.signOut()
             }
             .addOnFailureListener { e ->
