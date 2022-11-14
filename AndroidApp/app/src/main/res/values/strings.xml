@@ -2,8 +2,11 @@
     <string name="app_name">SmartMap</string>
     <string name="javeriana">Javeriana</string>
     <string name="game_view_content_description">Game view</string>
-    <string name="correo">Correo</string>
+    <string name="correo">Correo javeriano</string>
     <string name="contraseña">Contraseña</string>
     <string name="nombre">Nombre</string>
+    <string name="busqueda">Buscar edificio</string>
+    <string name="terminos">Esta aplicación recolecta la información de su ubicación dentro de la Pontificia Universidad Javeriana así como su comportamiento dentro de la misma (desplazamientos dentro del campus). Esto para poder brindarle un mejor servicio. ¿Está de acuerdo con el uso de esta información dentro de la aplicación? Esta no será compartida a nigún tercero.</string>
+
 
 </resources>

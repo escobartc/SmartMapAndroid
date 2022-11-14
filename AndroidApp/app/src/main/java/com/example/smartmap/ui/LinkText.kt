@@ -41,7 +41,7 @@ fun LinkButton(
     ) {
         Text(
             text = text,
-            fontSize = 24.sp
+            fontSize = 16.sp
         )
     }
 }

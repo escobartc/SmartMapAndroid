@@ -1,7 +1,16 @@
 package com.example.smartmap.model
-/*
-class Edificio(val numero: Int, id: Int, nombre: String, descripcion: String) : Lugar(
-    id, nombre,
-    descripcion
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Edificio(
+    val aforoActual: Int,
+    val descripcion: String,
+    @PrimaryKey
+    val id_edificio: Int,
+    val imagen: String,
+    val listaDeEntradas: String,
+    val nombre: String,
+    val palabras_clave: String
 )
-*/

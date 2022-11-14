@@ -1,10 +1,6 @@
 package com.example.smartmap.ui
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -19,15 +15,16 @@ import com.example.smartmap.R
 @Preview
 @Composable
 fun AppTitle() {
-    Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 60.dp, vertical = 16.dp)) {
+    Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 40.dp, vertical = 16.dp)) {
         Text(
+            modifier = Modifier.fillMaxWidth(),
             text = stringResource(id = R.string.app_name),
-            fontSize = 36.sp,
-            color = colorResource(id = R.color.lightBlue)
+            fontSize = 34.sp,
+            color = Color.White
         )
         Spacer(modifier = Modifier.size(4.dp))
         Text(
-            modifier = Modifier.padding(start = 90.dp),
+            modifier = Modifier.fillMaxWidth().padding(start = 90.dp),
             text = stringResource(id = R.string.javeriana),
             fontSize = 36.sp,
             color = Color.White
